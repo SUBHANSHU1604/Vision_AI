@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script defer src="http://localhost:5000/js/face-api.min.js"></script>
+  <script defer src="http://localhost:5000/js/script2.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url(https://image.shutterstock.com/image-vector/high-tech-technology-geometric-connection-260nw-1499204828.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    canvas {
+      position: relative;
+    }
+
+    #toggle-but {
+      width: 100px;
+      height: 100px;
+      border: none;
+      opacity: 0.5;
+      outline: none;
+      cursor: pointer;
+      border-radius: 50px;
+    }
+    #toggle-but:hover {
+      opacity: 0.7;
+    }
+
+  </style>
+</head>
+<body>
+  <video style="position: absolute; border-radius: 20px;" id="video" width="720" height="560" autoplay muted></video>
+  <button type="button" style="font-size: large; z-index: 4;" id="toggle-but" class="btn"></button>
+  <script>
+    buttonStatus = "STOP";
+    let tb = document.getElementById("toggle-but");
+    tb.style.backgroundColor = "#eb5772";
+    tb.innerText = buttonStatus;
+    tb.addEventListener('click', (e) => {
+      if(buttonStatus === "START") {
+        Promise.all([
+          faceapi.nets.tinyFaceDetector.loadFromUri('http://localhost:5000/js/models'),
+          faceapi.nets.faceLandmark68Net.loadFromUri('http://localhost:5000/js/models'),
+          faceapi.nets.faceRecognitionNet.loadFromUri('http://localhost:5000/js/models'),
+          faceapi.nets.faceExpressionNet.loadFromUri('http://localhost:5000/js/models')
+        ]).then(startVideo)
+
+        tb.style.backgroundColor = "#eb5772";
+        buttonStatus = "STOP";
+        tb.innerText = buttonStatus;
+      }
+      else {
+        video.srcObject = null;
+        canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+        document.body.removeChild(canvas);
+        tb.style.backgroundColor = "#57de64";
+        buttonStatus = "START";
+        tb.innerText = buttonStatus;
+      }
+    });
+  </script>
+</body>
+</html>

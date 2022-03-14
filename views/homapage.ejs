@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+
+    <title>Vision</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/jumbotron/">
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+      :root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  max-width: 100em;
+  background-image: url("http://localhost:5000/img/img.jpg");
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    /* Font Colour */
+    color:white;
+}
+.jumbotron2 {
+  background-color: #464646;
+  max-width: 100em;
+  height: 600px;
+  /*background-image: url("img.jpeg");*/
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center;
+    /* center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;*/
+    /* Font Colour */
+    color: #FFFFFF;
+}
+/*@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}*/
+
+/*.jumbotron p:last-child {
+  margin-bottom: 0;
+}*/
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  height: 500px;
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+#svg {
+  color: white;
+  width: 40%;
+  height: 40%;
+}
+
+.eye-outer {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 1;
+}
+
+.eye-inner {
+  fill: #FFFFFF;
+}
+   </style>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Emotion recognition is the process of identifying human emotion. People vary widely in their accuracy at recognizing the emotions of others.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled" style="display: flex; flex-direction: row;">
+                <li">
+                  <a target="_blank" href="https://www.linkedin.com/in/subhanshu-09435919b/" style="text-decoration: none;" class="mt-2">
+                    <i class="bi-linkedin" style="font-size: 3rem; color: cornflowerblue;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/Subhanshu.Kumar.1604" style="text-decoration: none;" class="mt-2">
+                    <i class="bi-facebook" style="font-size: 3rem; color: cornflowerblue;"></i>
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="mailto:subhanshu1604@gmail.com" style="text-decoration: none;" class="mt-2">
+                    <i class="bi-envelope-fill" style="font-size: 3rem; color: cornflowerblue;"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg> -->
+            <svg id="svg" viewBox="0 0 1000 1000" stroke="currentColor"><g id="left-eye"><circle class="eye-outer" cx="400" cy="500" r="100" /><circle class="eye-inner" cx="480" cy="500" r="20" /></g>
+            <g id="right-eye">
+              <circle class="eye-outer" cx="600" cy="500" r="100" />
+              <circle class="eye-inner" cx="680" cy="500" r="20" />
+            </g>
+            </svg>
+            <strong>Vision</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading display-1" style="padding-top: 150px">Computer vision</h1>
+          <!-- <svg id="svg" viewBox="0 0 1000 1000" stroke="currentColor"><g id="left-eye"><circle class="eye-outer" cx="400" cy="500" r="100" /><circle class="eye-inner" cx="480" cy="500" r="20" /></g>
+            <g id="right-eye">
+              <circle class="eye-outer" cx="600" cy="500" r="100" />
+              <circle class="eye-inner" cx="680" cy="500" r="20" />
+            </g>
+            </svg> -->
+          <p class="lead" style="font-size: larger;">Computer vision is a field of artificial intelligence (AI) that enables computers and systems to derive meaningful information from digital images, videos and other visual inputs</p>
+          <!-- <p>
+            <a href="#" class="btn btn-primary my-2">prm action</a>
+            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          </p> -->
+        </div>
+      </section>
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div style="background-color: #1f1c26; color: whitesmoke; text-align: center;" class="jumbotron2">
+        <div class="container">
+          <h1 class="display-3 text-white" style="padding-top: 200px">A new, magical video format</h1>
+          <!-- <img src="https://img.icons8.com/fluency/48/000000/vision.png"/> -->
+          <p class="text-white lead">Imagine an interactive video in which the narrative responds to the viewer’s appearance and reactions. This is now possible, with Vision. Interactive video creators can have access to mind-blowing new opportunities, within a professional, easy-to-use interactive video software.</p>
+        </div>
+      </div>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+
+          <h2 class="display-4 mb-4 mt-2" style="text-align: center;">Services</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" height="180px" src="http://localhost:5000/img/ema.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Analyze Emotions</p>
+                  <div style="display: flex; flex-direction: row; justify-content: center;">
+                    <button onclick="location.href = '/face_detection';" id="myButton" class="btn btn-outline-secondary" >AI Emotion Detection</button>
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" height="180px" src="http://localhost:5000/img/st.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Speech to Text</p>
+                  <!-- <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      
+                    </div>
+                  </div> -->
+                  <div style="display: flex; flex-direction: row; justify-content: center;">
+                    <button onclick="location.href = '/speech_to_text';" id="myButton" class="btn btn-outline-secondary">AI Speech Detection</button>
+                  </div>
+                </div>
+              </div>
+            </div>        
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow" >
+                <img class="card-img-top" height="180px" src="http://localhost:5000/img/ts.png" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text">Text to Speech</p>
+                  <div style="display: flex; flex-direction: row; justify-content: center;">
+                    <button onclick="location.href = '/text_to_speech';" id="myButton" class="btn btn-outline-secondary" >AI Text Detection</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="text-muted" style="background-color: #000; color: #FFFFFF">
+      <div class="container">
+        <p class="float-right">
+          <a href="#" class="btn btn-lg btn-primary" style="background-color: #1f1c26; border-radius: 30px;">Back to top</a>
+        </p>
+        
+        <p>&copy; Vision</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+  </script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script>var svg = document.querySelector("#svg");
+var mouse = svg.createSVGPoint();
+
+var leftEye = createEye("#left-eye");
+var rightEye = createEye("#right-eye");
+
+var requestId = null;
+
+window.addEventListener("mousemove", onMouseMove)
+
+function onFrame() {
+  
+  var point = mouse.matrixTransform(svg.getScreenCTM().inverse());
+  
+  leftEye.rotateTo(point);
+  rightEye.rotateTo(point);
+  
+  requestId = null;
+}
+
+function onMouseMove(event) {
+  mouse.x = event.clientX;
+  mouse.y = event.clientY;
+  
+  if (!requestId) {
+    requestId = requestAnimationFrame(onFrame);
+  }
+}
+
+function createEye(selector) {
+  
+  var element = document.querySelector(selector);
+  
+  TweenLite.set(element, {
+    transformOrigin: "center"
+  });
+  
+  var bbox = element.getBBox();
+  var centerX = bbox.x + bbox.width / 2;
+  var centerY = bbox.y + bbox.height / 2;
+  
+  function rotateTo(point) {
+    
+    var dx = point.x - centerX;
+    var dy = point.y - centerY;
+    
+    var angle = Math.atan2(dy, dx);
+    
+    TweenLite.to(element, 0.3, {
+      rotation: angle + "_rad_short"
+    });
+  }
+  
+  return {
+    element: element,
+    rotateTo: rotateTo
+  };
+}
+</script>
+  </body>
+</html>
